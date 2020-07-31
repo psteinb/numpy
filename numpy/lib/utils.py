@@ -1063,7 +1063,7 @@ def summary(a, axis=None):
 
     value = header
     value += os.linesep
-    if axis is not None:
+    if axis is None:
         rfmt = "{0:4s} {1:10f} {2:10f} {3:10f} {4:10f} {5:10f} {6:10f} {7:10f}"
         value += rfmt.format(" ", np.min(a), np.percentile(a, q=.25), np.mean(a),
                              np.std(a), np.median(a), np.percentile(a, q=.75),
